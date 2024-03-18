@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Inclua os arquivos CSS e JavaScript do Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+  <script>
+   
+    // Função para trocar a imagem e ajustar as dimensões
+    function trocarImagem() {
+        var photoFrame = document.getElementById('photo-frame');
+        var currentImage = photoFrame.getElementsByTagName('img')[0];
+
+        // Obter as dimensões originais da imagem "iris creme.jpg"
+        var larguraOriginal = currentImage.width;
+        var alturaOriginal = currentImage.height;
+
+        // Trocar para a imagem "pipa.jpg"
+        currentImage.src = 'pipa.jpg';
+
+        // Definir as dimensões da imagem "pipa.jpg" para serem iguais à imagem original
+        currentImage.style.width = larguraOriginal + 'px';
+        currentImage.style.height = alturaOriginal + 'px';
+    }
+
+    // Função para restaurar a imagem original
+    function restaurarImagemOriginal() {
+        var photoFrame = document.getElementById('photo-frame');
+        var currentImage = photoFrame.getElementsByTagName('img')[0];
+
+        // Trocar de volta para a imagem original "iris creme.jpg"
+        currentImage.src = 'iris creme.jpg';
+        // Restaurar o tamanho original
+        currentImage.style.width = '';
+        currentImage.style.height = '';
+    }
+    
+  
+
+         
+</script>
+<style>
+
+ .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha no canto superior direito */
+    margin-right: 10px; /* Adicione uma margem para ajustar conforme necessário */
+}
+
+.search-box input {
+    padding: 15px;
+    width: 200px; /* Defina a largura desejada */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box button {
+    padding: 15px;
+    background-color: #ffc0cb;
+    color: #888;
+    border: #ffc0cb;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    outline: none;
+}
+
+.search-box button {
+    margin-top: 0;
+}
+
+
+
+
+</style>
+
+
+
+    <title>Beauty Essence</title>
+</head>
+
+<body>
+    
+ <header>
+       
+           <div class="navbar" id="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Seu Logo">
+    </div>
+    <div class="search-box">
+        <input type="text" placeholder="Pesquisar">
+        <button type="button">Procurar</button>
+    </div>
+</div>
+<div class="navbar-divider"></div>
+<div id="white-bar"></div>
+<nav>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="SobreNós.html">Sobre Nós</a></li>
+        <li><a href="#" onclick="scrollToFooter()">Onde Estamos</a></li>
+    </ul>
+</nav>
+ <section id="onde-estamos">
+       
+        <!-- Seu conteúdo da seção "Onde Estamos" aqui -->
+    </section>
+
+     <script>
+        function scrollToFooter() {
+            var footer = document.getElementById('footer');
+            footer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+
+    
+
+    <!-- ... Seu código do carrossel e outras seções ... -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+        
+    </script>
+
+    <script>
+    // Adicionar um ouvinte de evento para rolagem
+    window.addEventListener('scroll', function() {
+        var navbar = document.getElementById('navbar');
+        var menu = document.getElementById('menu');
+        var whiteBar = document.getElementById('white-bar'); // Adicionando referência à barra branca
+        var initialNavbarOffset = navbar.offsetTop;
+
+        if (window.scrollY > initialNavbarOffset) {
+            navbar.style.position = 'fixed';
+            navbar.style.top = 0;
+            navbar.style.width = '100%';
+            navbar.style.zIndex = 1000;
+            navbar.style.boxShadow = '0 2px 2px rgba(0, 0, 0, 0.1)';
+            
+            menu.style.position = 'fixed';
+            menu.style.top = navbar.offsetHeight + 'px';
+            menu.style.width = '100%';
+            menu.style.zIndex = 999;
+
+            // Ajustando a barra branca quando a barra de navegação é fixada
+            whiteBar.style.height = menu.offsetHeight + 'px';
+            whiteBar.style.width = '100%';
+            whiteBar.style.backgroundColor = '#fff';
+            whiteBar.style.position = 'fixed';
+            whiteBar.style.top = navbar.offsetHeight + 'px';
+            whiteBar.style.zIndex = 998; // Um número menor que o zIndex da barra de navegação
+        } else {
+            navbar.style.position = '';
+            navbar.style.top = '';
+            navbar.style.width = '';
+            navbar.style.zIndex = '';
+            navbar.style.boxShadow = '';
+            
+            menu.style.position = '';
+            menu.style.top = '';
+            menu.style.width = '';
+            menu.style.zIndex = '';
+
+            // Resetando a barra branca quando a barra de navegação não está fixa
+            whiteBar.style.height = '0';
+            whiteBar.style.width = '0';
+            whiteBar.style.backgroundColor = 'transparent';
+            whiteBar.style.position = '';
+            whiteBar.style.top = '';
+            whiteBar.style.zIndex = '';
+        }
+    });
+
+
+
+
+    
+</script>
+
+
+
+    </header>
+
+    <!-- Adicionando o carrossel abaixo da barra de navegação -->
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="foto 3.jpg" class="d-block w-100 h-100" alt="Imagem 1">
+                <div class="carousel-caption">
+                    <h3>Precisa de realçar a sua beleza?</h3>
+                    <p> Marque o seu procedimento connosco !</p>
+                     <a href="https://xd.adobe.com/view/3f6a8122-b9a7-4767-a5e3-410698015360-6a39/"><button type="button">Clique aqui</button></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="foto 2.jpg" class="d-block w-100" alt="Imagem 2">
+                <div class="carousel-caption">
+                    <h3>Explore as nossas novidades e promoções exclusivas</h3>
+                    <p>Descubra uma beleza que faz a diferença.</p>
+                   <a href="produtos.html"><button type="button">Saiba mais...</button></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="foto 1.jpg" class="d-block w-100" alt="Imagem 3">
+                <div class="carousel-caption">
+                    <h3>Produtos naturais e Sustentáveis </h3>
+                    <p>Venha testá-los na nossa loja</p>
+                     <a href="https://xd.adobe.com/view/3f6a8122-b9a7-4767-a5e3-410698015360-6a39/"><button type="button">Onde estamos? </button></a>
+                </div>
+            </div>
+        </div>
+        
+
+    <div class="section-container">
+
+    <h2 class="title-with-margin">As nossas especialidades</h2>
+
+
+       <div class="ball-container">
+    <div class="ball">
+        <img src="icon makeup.jpg" alt="Bola 1">
+        <div class="ball-text">Maquilhagem </div>
+        <div class="ball-button">
+            <a href="Maquilhagem.html" class="custom-button">Ver mais</a>
+        </div>
+    </div>
+
+    <div class="ball">
+        <img src="icon skincare.jpg" alt="Bola 2">
+        <div class="ball-text">Cuidados de pele</div>
+        <div class="ball-button">
+           <a href="CuidadosDePele.html" class="custom-button">Ver mais</a>
+        </div>
+    </div>
+
+    <div class="ball">
+        <img src="icon unhas.jpg" alt="Bola 3">
+        <div class="ball-text">Unhas</div>
+        <div class="ball-button">
+           <a href="Unhas.html" class="custom-button">Ver mais</a>
+        </div>
+    </div>
+</div>
+
+  <!-- ... Seu código HTML anterior ... -->
+
+
+<div class="photo-section">
+    <div class="photo-container">
+        <div class="green-rectangle"></div>
+        <!-- Adicionando ouvintes de evento para mouseover e mouseout -->
+        <div class="photo-frame" id="photo-frame" onmouseover="trocarImagem()" onmouseout="restaurarImagemOriginal()">
+            <img src="iris creme.jpg" alt="Sua Foto" class="photo">
+        </div>
+
+        <div id="mc_embed_shell" class="subscription-container">
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width: 80%;}
+        </style>
+        <div id="mc_embed_signup">
+            <form action="https://online.us21.list-manage.com/subscribe/post?u=e6e3b1f3d83682f70d1d53b1e&amp;id=3a070ff2aa&amp;f_id=00dcdfe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                <div class="subscription-text" h1>Assine a nossa Newsletter!</h1>
+                    <br>
+
+                <p>Receba as últimas novidades no seu email.</p></div>
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL"> <span class="asterisk"></span></label>
+                    <input type="email" name="EMAIL" class="required email subscription-input" id="mce-EMAIL" required="" value="">
+                </div>
+                <div id="mce-responses" class="clear foot">
+                    <div class="response" id="mce-error-response" style="display: none;"></div>
+                    <div class="response" id="mce-success-response" style="display: none;"></div>
+                </div>
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                    <input type="text" name="b_e6e3b1f3d83682f70d1d53b1e_3a070ff2aa" tabindex="-1" value="">
+                </div>
+                <div class="optionalParent">
+                    <div class="clear foot">
+                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button subscribe-button" value="Subscribe">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='MMERGE6';ftypes[6]='text';fnames[7]='MMERGE7';ftypes[7]='address';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    </div>
+
+    <h2 style="margin-top: 190px; margin-bottom: 70px;">Os nossos profissionais </h2>
+
+
+  <script>
+  function mudarImagemMafasUnhas() {
+            document.getElementById('imagem-mafas-unhas').src = 'unhas juntos.jpg';
+        }
+
+        function mudarImagemNanaBatom() {
+            document.getElementById('imagem-nana-batom').src = 'maquilhagem.jpg';
+        }
+
+        function mudarImagemZeSkinCare() {
+            document.getElementById('imagem-ze-skin-care').src = 'cuidados de pele.jpg';
+        }
+
+        function restaurarImagemProfissional() {
+            document.getElementById('imagem-mafas-unhas').src = 'mafas unhas.jpg';
+            document.getElementById('imagem-nana-batom').src = 'nana batom.jpg';
+            document.getElementById('imagem-ze-skin-care').src = 'ze skin care.jpg';
+        }
+
+         
+</script>
+
+
+    <div class="additional-photos">
+        <!-- Primeira imagem -->
+        <div class="additional-photo" onmouseover="mudarImagemNanaBatom()" onmouseout="restaurarImagemProfissional()">
+            <img src="nana batom.jpg" alt="Nana Batom" id="imagem-nana-batom">
+            <h3>Mariana Roquette</h3>
+            <p class="caption">Maquilhagem</p>
+        </div>
+
+        <!-- Segunda imagem -->
+        <div class="additional-photo" onmouseover="mudarImagemZeSkinCare()" onmouseout="restaurarImagemProfissional()">
+            <img src="ze skin care.jpg" alt="Zé Skin Care" id="imagem-ze-skin-care">
+            <h3>José Eduardo Gonzalez</h3>
+            <p class="caption">Cuidados de pele</p>
+        </div>
+
+        <!-- Terceira imagem -->
+        <div class="additional-photo" onmouseover="mudarImagemMafasUnhas()" onmouseout="restaurarImagemProfissional()">
+            <img src="mafas unhas.jpg" alt="Mafas Unhas" id="imagem-mafas-unhas">
+            <h3>Mafalda Martins</h3>
+            <p class="caption">Unhas</p>
+        </div>
+    </div>
+    
+
+
+
+    <footer id="footer">
+   <div class="footer">
+        <div class="footer-section">
+            <div class="footer-title">Contactos:</div>
+            <a href="#" class="footer-button">Número de telefone:</a>
+            <p>214 186 378 </p>
+            <a href="https://accounts.google.com/v3/signin/identifier?elo=1&ifkv=ATuJsjx0IKwMD0ncuCPa1gXaQU-jTDbiw2SjidM6qnXx8QH_2mg0--JZkyldQ1QgHnvKux6wnOjLQA&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1" class="footer-button">Email:</a>
+            <p> geral@beautyessence.com </p>
+            <a href="https://www.google.com/maps/place/Centro+C%C3%ADvico+de+Carnaxide/@38.7268189,-9.2470789,17z/data=!4m10!1m2!2m1!1sC.C.,+Carnaxide-+Av.+de+Portugal+2790-061+Carnaxide!3m6!1s0xd1ecc5d8c4e72e7:0x9ea179375e258237!8m2!3d38.7268189!4d-9.2423153!15sCjNDLkMuLCBDYXJuYXhpZGUtIEF2LiBkZSBQb3J0dWdhbCAyNzkwLTA2MSBDYXJuYXhpZGWSARFyZWNyZWF0aW9uX2NlbnRlcuABAA!16s%2Fg%2F11cn2m2n04?entry=ttu" class="footer-button">Morada:</a>
+            <p class="alinhamento-esquerda">C.C., Carnaxide- Av. de Portugal <br>
+            2790-061 Carnaxide</p>
+         </div>
+
+          <div class="footer-section section-2">
+         <div class="footer-section">
+            <div class="footer-title">Procedimentos:</div>
+             <a href="Maquilhagem.html" class="footer-button">Maquilhagem</a>
+             <a href="CuidadosDePele.html" class="footer-button">Cuidados de pele</a>
+             <a href="Unhas.html" class="footer-button">Unhas</a>
+        </div>
+<br>
+<br>
+        <div class="footer-images">
+        <a href="https://www.facebook.com/login/"><img src="icon fb.png" alt="facebook" width="40" height="40"></a>
+        <a href="https://www.instagram.com/"><img src="icon insta.png" alt="Instagram" width="40" height="40"></a>
+        <a href="https://twitter.com/i/flow/login"><img src="icon tt.png" alt="twitter" width="40" height="40"></a>
+        </div>
+</div>
+
+
+
+
+
+</body>
+
+</html> 

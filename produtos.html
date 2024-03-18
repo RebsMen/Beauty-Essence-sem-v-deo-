@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Beauty Essence</title>
+</head>
+
+
+ 
+<body>
+    <style>
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha no canto superior direito */
+    margin-right: 10px; /* Adicione uma margem para ajustar conforme necessário */
+}
+
+.search-box input {
+    padding: 15px;
+    width: 200px; /* Defina a largura desejada */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box button {
+    padding: 15px;
+    background-color: #ffc0cb;
+    color: #888;
+    border: #ffc0cb;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    outline: none;
+}
+
+.search-box button {
+    margin-top: 0;
+}
+
+.price {
+        font-weight: bold;
+        font-size: 16px; /* Opcional: ajuste o tamanho da fonte conforme necessário */
+    }
+
+.title {
+        font-weight: bold;
+        font-size: 18px; /* Opcional: ajuste o tamanho da fonte conforme necessário */
+    }
+
+</style>
+ <header>
+
+     <script>
+        
+        window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    var menu = document.getElementById('menu');
+    var whiteBar = document.getElementById('white-bar'); // Adicionando referência à barra branca
+    var initialNavbarOffset = navbar.offsetTop;
+
+    if (window.scrollY > initialNavbarOffset) {
+        // Se a posição de rolagem for maior que a posição inicial da navbar, torna a navbar fixa
+        navbar.style.position = 'fixed';
+        navbar.style.top = 0;
+        navbar.style.width = '100%';
+        navbar.style.zIndex = 1000;
+        navbar.style.boxShadow = '0 2px 2px rgba(0, 0, 0, 0.1)';
+        
+        menu.style.position = 'fixed';
+        menu.style.top = navbar.offsetHeight + 'px';
+        menu.style.width = '100%';
+        menu.style.zIndex = 999;
+
+        // Ajustando a barra branca quando a barra de navegação é fixada
+        whiteBar.style.height = menu.offsetHeight + 'px';
+        whiteBar.style.width = '100%';
+        whiteBar.style.backgroundColor = '#fff';
+        whiteBar.style.position = 'fixed';
+        whiteBar.style.top = navbar.offsetHeight + 'px';
+        whiteBar.style.zIndex = 998; // Um número menor que o zIndex da barra de navegação
+    } else {
+        // Se não, restaura a posição original da navbar
+        navbar.style.position = '';
+        navbar.style.top = '';
+        navbar.style.width = '';
+        navbar.style.zIndex = '';
+        navbar.style.boxShadow = '';
+        
+        menu.style.position = '';
+        menu.style.top = '';
+        menu.style.width = '';
+        menu.style.zIndex = '';
+
+        // Resetando a barra branca quando a barra de navegação não está fixa
+        whiteBar.style.height = '0';
+        whiteBar.style.width = '0';
+        whiteBar.style.backgroundColor = 'transparent';
+        whiteBar.style.position = '';
+        whiteBar.style.top = '';
+        whiteBar.style.zIndex = '';
+    }
+});
+
+
+    </script>
+    
+
+       
+           <div class="navbar" id="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Seu Logo">
+    </div>
+    <div class="search-box">
+        <input type="text" placeholder="Pesquisar">
+        <button type="button">Procurar</button>
+    </div>
+</div>
+<div class="navbar-divider"></div>
+<div id="white-bar"></div>
+<nav>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="SobreNós.html">Sobre Nós</a></li>
+        <li><a href="#" onclick="scrollToFooter()">Onde Estamos</a></li>
+    </ul>
+</nav>
+</nav>
+ <section id="onde-estamos">
+       
+        <!-- Seu conteúdo da seção "Onde Estamos" aqui -->
+    </section>
+
+     </header>
+
+<body>
+   
+
+
+
+
+
+    <h2 style="margin-top: 50px; margin-bottom: 50px;"><h2 class="titulo-centralizado">Mais vendidos</h2>
+
+    <div class="additional-photos">
+        <!-- Primeira imagem -->
+        <div class="additional-photo" >
+            <img src="blush.jpg" alt="Blush" id="imagem-maquilhagem">
+            <h3 class="title">Blush</h3>
+            <p class="caption">Maquilhagem</p>
+            <span class="price">9,99€</strong></span>
+        </div>
+
+        <!-- Segunda imagem -->
+        <div class="additional-photo" >
+            <img src="cremão.jpg" alt="Cremão" id="imagem-cuidados-de-pele">
+            <h3 class="title">Creme Hidratante</h3>
+            <p class="caption">Cuidados de pele</p>
+            <span class="price">12,50€</strong></span>
+        </div>
+
+        <!-- Terceira imagem -->
+        <div class="additional-photo" >
+            <img src="verniz.jpg" alt="Verniz" id="imagem-unhas-juntos">
+            <h3 class="title">Verniz</h3>
+            <p class="caption">Unhas</p>
+            <span class="price">5,00€</strong></span>
+        </div>
+    </div>
+</div>
+
+<h2 style="margin-top: 50px; margin-bottom: 70px;"><h2 class="titulo-centralizado">Promoções</h2>
+
+
+
+
+    <div class="additional-photos">
+        <!-- Primeira imagem -->
+        <div class="additional-photo" >
+            <img src="3 produtos.jpg" alt="3 produtos" id="imagem-3-produtos">
+            <h3 class="title">Kit Cuidados de Pele</h3>
+            <p class="caption">Produtos Orgânicos </p>
+            <span class="price">23,40€</strong></span>
+        </div>
+
+        <!-- Segunda imagem -->
+        <div class="additional-photo" >
+            <img src="kit unhas.jpg" alt="unhas" id="imagem-unhas">
+           <h3 class="title">Kit Unhas</h3>
+            <p class="caption">Produtos Sustentáveis</p>
+            <span class="price"> 14,70€</strong></span>
+        </div>
+
+        <!-- Terceira imagem -->
+        <div class="additional-photo">
+            <img src="juntos.jpg" alt="Juntos" id="imagem-juntos">
+            <h3 class="title">Mix Kit </h3>
+            <p class="caption"> Produtos Naturais </p>
+            <span class="price">28,50€</strong></span>
+        </div>
+    </div>
+</div>
+
+ <script>
+
+        function scrollToFooter() {
+            var footer = document.getElementById('footer');
+            footer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+
+
+<footer id="footer">
+   <div class="footer">
+        <div class="footer-section">
+            <div class="footer-title">Contactos:</div>
+            <a href="#" class="footer-button">Número de telefone:</a>
+            <p>214 186 378 </p>
+            <a href="https://accounts.google.com/v3/signin/identifier?elo=1&ifkv=ATuJsjx0IKwMD0ncuCPa1gXaQU-jTDbiw2SjidM6qnXx8QH_2mg0--JZkyldQ1QgHnvKux6wnOjLQA&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1" class="footer-button">Email:</a>
+            <p> geral@beautyessence.com </p>
+            <a href="https://www.google.com/maps/place/Centro+C%C3%ADvico+de+Carnaxide/@38.7268189,-9.2470789,17z/data=!4m10!1m2!2m1!1sC.C.,+Carnaxide-+Av.+de+Portugal+2790-061+Carnaxide!3m6!1s0xd1ecc5d8c4e72e7:0x9ea179375e258237!8m2!3d38.7268189!4d-9.2423153!15sCjNDLkMuLCBDYXJuYXhpZGUtIEF2LiBkZSBQb3J0dWdhbCAyNzkwLTA2MSBDYXJuYXhpZGWSARFyZWNyZWF0aW9uX2NlbnRlcuABAA!16s%2Fg%2F11cn2m2n04?entry=ttu" class="footer-button">Morada:</a>
+            <p class="alinhamento-esquerda">C.C., Carnaxide- Av. de Portugal <br>
+            2790-061 Carnaxide</p>
+         </div>
+
+          <div class="footer-section section-2">
+         <div class="footer-section">
+            <div class="footer-title">Procedimentos:</div>
+             <a href="Maquilhagem.html" class="footer-button">Maquilhagem</a>
+             <a href="CuidadosDePele.html" class="footer-button">Cuidados de pele</a>
+             <a href="Unhas.html" class="footer-button">Unhas</a>
+        </div>
+<br>
+<br>
+        <div class="footer-images">
+        <a href="https://www.facebook.com/login/"><img src="icon fb.png" alt="facebook" width="40" height="40"></a>
+        <a href="https://www.instagram.com/"><img src="icon insta.png" alt="Instagram" width="40" height="40"></a>
+        <a href="https://twitter.com/i/flow/login"><img src="icon tt.png" alt="twitter" width="40" height="40"></a>
+        </div>
+</div>
+
+
+</body>
+
+</html> 

@@ -1,0 +1,478 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+}
+
+
+header {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.navbar-divider {
+    height: 2px;
+    width: 100%;
+    background-color: #ffc0cb;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+
+/* Estilos básicos da barra de navegação */
+.navbar {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.logo img {
+    max-height: 120px;
+    margin-top: 5px;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+.search-box input,
+.search-box button {
+    outline: none;
+}
+
+
+.search-box input {
+    padding: 15px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box button {
+    padding: 15px;
+    background-color: #ffc0cb;
+    color: #888;
+    border: #ffc0cb;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #ffc0cb;
+    text-decoration: none; /* Remover sublinhado ao focar na barra de pesquisa */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-text {
+    white-space: nowrap;
+}
+
+.search-box button,
+.search-box button a {
+    text-decoration: none;
+}
+
+
+/* ... Outros estilos ... */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 15px;
+}
+
+nav ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+/* ... Outros estilos ... */
+
+
+nav ul li a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover:after,
+nav ul li a:focus:after {
+    width: 100%;
+    background-color: #ffc0cb;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+/* Carousel styles */
+.carousel-inner img {
+    max-height: 445px;
+    object-fit: cover;
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Ball container styles */
+.ball-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ball {
+    flex: 0 1 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ball img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.ball-text {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+  font-size: 20px;
+    
+}
+
+.ball-button {
+    margin-top: 10px;
+}
+
+#button {
+    padding: 10px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Section container styles */
+.section-container {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.title-with-margin {
+    margin-bottom: 50px;
+}
+
+/* Photo container styles */
+
+.subscription-container {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    transform: translate(0, -50%);
+    text-align: right;
+    color: #000000;
+    z-index: 2;
+    width: 400px; /* Set a specific width for better positioning */
+}
+/* Ajuste o tamanho do botão de envio */
+.subscribe-button {
+    width: 150px; /* Ajuste a largura conforme necessário */
+    height: 40px; /* Ajuste a altura conforme necessário */
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-top: 20px; /* Ajuste o valor conforme necessário para mover o botão para baixo */
+    margin-right: 50px !important; /* Ajuste o valor conforme necessário para mover para a esquerda */
+
+}
+.subscription-input {
+    width: 250px; /* Defina a largura desejada */
+    height: 30px; /* Defina a altura desejada */
+    padding: 10px; /* Pode ajustar o preenchimento conforme necessário */
+    font-size: 16px; /* Pode ajustar o tamanho da fonte conforme necessário */
+}
+
+
+
+.photo-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.photo-frame {
+    position: relative;
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 90px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.photo {
+    width: 100%;
+    height: 90%;
+    max-width: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.title-container {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+   text-align: center;
+    color: #000000;
+    z-index: 2;
+}
+
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0, -50%);
+    text-align: center;
+    color: #000000;
+    z-index: 2;
+}
+
+
+.subscription-container p {
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    ext-align: center; 
+}
+
+.green-rectangle {
+    width: 100%;
+    height: 325px;
+    background-color: #ECF1E6;
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+}
+/* Evite que o texto quebre para uma nova linha e defina a largura */
+.subscription-text {
+    white-space: nowrap;
+    width: 400px; /* Ajuste a largura conforme necessário */
+    font-size: 34px;
+    text-align: center; 
+}
+
+
+
+#mc_embed_signup {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Additional photos styles */
+.additional-photos {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.additional-photo {
+    flex: 0 1 30%;
+    margin-bottom: 20px;
+}
+
+.additional-photo img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.caption {
+    color: #666666;
+}
+
+#carouselExample .carousel-caption {
+    color: #666666 !important;
+}
+
+/* Additional photo titles styles */
+.additional-photo h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Subscription container styles */
+
+/* Button styles */
+.custom-button,
+.carousel-caption button,
+.ball-button button,
+.subscribe-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.custom-button,
+.carousel-caption button,
+.ball-button button {
+    background-color: #ffc0cb;
+    color: #fff;
+}
+
+.subscribe-button {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.custom-button:focus,
+.subscribe-button:focus {
+    outline: none;
+    border: 2px solid #ffc0cb !important;
+}
+
+
+/* Footer styles */
+.footer {
+    background-color: #FFF9F0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 7px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.footer-button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-button {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffc0cb;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s;
+}
+
+.footer-button:hover,
+.footer-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-button:hover::after,
+.footer-button:focus::after {
+    transform: scaleX(1);
+}
+
+/* Miscellaneous styles */
+.footer-images img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.titulo-centralizado {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.custom-button,
+.custom-button:hover,
+.custom-button:active,
+.custom-button:focus {
+    text-decoration: none;
+    color: #fff;
+}

@@ -1,0 +1,366 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+}
+
+
+header {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.navbar-divider {
+    height: 2px;
+    width: 100%;
+    background-color: #ffc0cb;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+
+/* Estilos básicos da barra de navegação */
+.navbar {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.logo img {
+    max-height: 120px;
+    margin-top: 5px;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+.search-box input,
+.search-box button {
+    outline: none;
+}
+
+
+.search-box input {
+    padding: 15px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box button {
+    padding: 15px;
+    background-color: #ffc0cb;
+    color: #888;
+    border: #ffc0cb;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #ffc0cb;
+    text-decoration: none; /* Remover sublinhado ao focar na barra de pesquisa */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.button-text {
+    white-space: nowrap;
+}
+
+.search-box button,
+.search-box button a {
+    text-decoration: none;
+}
+
+
+/* ... Outros estilos ... */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 15px;
+}
+
+nav ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+/* ... Outros estilos ... */
+
+
+nav ul li a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover:after,
+nav ul li a:focus:after {
+    width: 100%;
+    background-color: #ffc0cb;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+
+.photo-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.photo-frame {
+    position: relative;
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 90px;
+    overflow: hidden;
+    z-index: 3; /* Coloque a fotografia à frente de tudo */
+}
+
+/* Ajustando o tamanho da fotografia dentro do retângulo */
+.photo {
+    width: 100%;
+    height: 90%;
+    max-width: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px; /* Adicione esta linha para arredondar os cantos da imagem */
+    overflow: hidden;
+
+}
+
+.title-container {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Ajuste a margem esquerda conforme necessário */
+    transform: translate(0, -50%);
+    text-align: left; /* Alinhe o título à esquerda */
+    color: #000000;
+    z-index: 2; /* Coloque o título à frente da fotografia */
+}
+
+
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Ajuste a margem direita conforme necessário */
+    transform: translate(0, -50%);
+    text-align: right; /* Alinhe o texto à direita */
+    color: #000000;
+    z-index: 2; /* Coloque o texto à frente da fotografia */
+}
+
+.green-rectangle {
+    width: 100%;
+    height: 270px; /* Ajuste a altura conforme necessário */
+    background-color: #ECF1E6; /* Cor verde desejada */
+    position: absolute;
+    z-index: 1; /* Coloque o retângulo por trás da fotografia e do texto */
+    margin-top: 10px;
+}
+
+
+/* Add styles for additional photos */
+.additional-photos {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.additional-photo {
+    flex: 0 1 30%; /* Adjust width as needed */
+    margin-bottom: 20px;
+}
+
+.additional-photo img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.additional-photo img {
+    width: 350px; /* ou outro valor desejado */
+    height: auto; /* Isso mantém a proporção original da imagem */
+    border-radius: 8px;
+}
+.caption {
+    color: #666666;
+}
+
+.navbar button,{
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+    margin-bottom: 10px;
+}
+
+/* Estilo para a linha cor de rosa */
+.navbar button::after,{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffc0cb;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+}
+
+/* Quando hover ou focus, expandir a linha cor de rosa */
+.navbar button:hover::after,
+.navbar button:focus::after,
+{
+    transform: scaleX(1);
+}
+
+
+/* Add styles for photo titles */
+.additional-photo h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+.footer-section.section-2 {
+    position: relative !important;
+    left: -200px !important; /* ou qualquer outro valor negativo desejado */
+}
+
+
+.footer-images img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px; /* Add a right margin of 5px to each image */
+}
+.subscription-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.subscription-container {
+    position: absolute;
+    top: 50%;
+    left: 70%; /* Ajuste a posição para a direita conforme necessário */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000000;
+    z-index: 2; /* Ajuste para ser maior do que o z-index do .green-rectangle */
+}
+
+.subscription-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.content-container {
+    position: relative;
+}
+
+.section-container {
+    text-align: center;
+    margin:50px auto; /* Ajuste a margem superior e inferior conforme necessário */
+}
+.title-with-margin {
+    margin-bottom: 20px; /* Ajuste a margem inferior conforme necessário */
+    margin-top: 100px;
+}
+
+/* Additional styles for the new sections */
+.additional-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+    text-align: center;
+}
+
+.text-box {
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px; /* Adjust as needed */
+}
+
+
+.division-line {
+    width: 2px;
+    height: 150px; /* Adjust as needed */
+    background-color: #ffc0cb; /* Color for the division line */
+    margin: 0 20px; /* Adjust as needed */
+}
+
+.title-and-images {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    margin-right: 10px;
+}
+.additional-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="procedimentos.css">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Beauty Essence</title>
+</head>
+
+
+  <style>
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha no canto superior direito */
+    margin-right: 10px; /* Adicione uma margem para ajustar conforme necessário */
+}
+
+.search-box input {
+    padding: 15px;
+    width: 200px; /* Defina a largura desejada */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box button {
+    padding: 15px;
+    background-color: #ffc0cb;
+    color: #888;
+    border: #ffc0cb;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    outline: none;
+}
+
+.search-box button {
+    margin-top: 0;
+}
+
+
+
+
+
+
+.footer {
+            background-color: #FFF9F0; /* Cor de fundo bege */
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-top: 70px;
+        }
+
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 7px;
+           
+        }
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: left; /* Alinhamento à esquerda */
+             margin-top: 50px;
+        }
+
+        .footer-button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-button {
+            position: relative;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 16px;
+            color: #000;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-button::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #ffc0cb; /* Cor do sublinhado rosa */
+            bottom: 0;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: transform 0.3s;
+        }
+
+        .footer-button:hover,
+        .footer-button:focus {
+            color: #000; /* Mudando a cor para preto ao passar o mouse */
+            text-decoration: none; /* Removendo o sublinhado padrão */
+        }
+
+        .footer-button:hover::after,
+        .footer-button:focus::after {
+            transform: scaleX(1);
+
+
+.footer-section.section-2 {
+    position: relative !important;
+    left: -200px !important; /* ou qualquer outro valor negativo desejado */
+}
+
+
+
+.footer-images img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; /* Add a right margin of 5px to each image */
+}
+
+.section-container {
+    text-align: center;
+    margin: 50px auto; /* Ajuste a margem superior e inferior conforme necessário */
+}
+.title-with-margin {
+    margin-bottom: 50px; /* Ajuste a margem inferior conforme necessário */
+}
+
+
+.photo-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.photo-frame {
+    position: relative;
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 90px;
+    overflow: hidden;
+    z-index: 3; /* Coloque a fotografia à frente de tudo */
+}
+
+/* Ajustando o tamanho da fotografia dentro do retângulo */
+.photo {
+    width: 100%;
+    height: 90%;
+    max-width: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px; /* Adicione esta linha para arredondar os cantos da imagem */
+    overflow: hidden;
+
+}
+
+.title-container {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Ajuste a margem esquerda conforme necessário */
+    transform: translate(0, -50%);
+    text-align: left; /* Alinhe o título à esquerda */
+    color: #000000;
+    z-index: 2; /* Coloque o título à frente da fotografia */
+}
+
+
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Ajuste a margem direita conforme necessário */
+    transform: translate(0, -50%);
+    text-align: right; /* Alinhe o texto à direita */
+    color: #000000;
+    z-index: 2; /* Coloque o texto à frente da fotografia */
+}
+
+.green-rectangle {
+    width: 100%;
+    height: 270px; /* Ajuste a altura conforme necessário */
+    background-color: #ECF1E6; /* Cor verde desejada */
+    position: absolute;
+    z-index: 1; /* Coloque o retângulo por trás da fotografia e do texto */
+    margin-top: 10px;
+}
+
+
+/* Add styles for additional photos */
+.additional-photos {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.additional-photo {
+    flex: 0 1 30%; /* Adjust width as needed */
+    margin-bottom: 20px;
+}
+
+.additional-photo img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.additional-photo img {
+    width: 350px; /* ou outro valor desejado */
+    height: auto; /* Isso mantém a proporção original da imagem */
+    border-radius: 8px;
+}
+.caption {
+    color: #666666;
+}
+.additional-photo h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.green-rectangle {
+    width: 100%;
+    height: 270px; /* Ajuste a altura conforme necessário */
+    background-color: #ECF1E6; /* Cor verde desejada */
+    position: absolute;
+    z-index: 1; /* Coloque o retângulo por trás da fotografia e do texto */
+    margin-top: 10px;
+}
+
+.additional-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+
+    </style>
+
+<body>
+    
+ <header>
+    <script>
+        
+        window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    var menu = document.getElementById('menu');
+    var whiteBar = document.getElementById('white-bar'); // Adicionando referência à barra branca
+    var initialNavbarOffset = navbar.offsetTop;
+
+    if (window.scrollY > initialNavbarOffset) {
+        // Se a posição de rolagem for maior que a posição inicial da navbar, torna a navbar fixa
+        navbar.style.position = 'fixed';
+        navbar.style.top = 0;
+        navbar.style.width = '100%';
+        navbar.style.zIndex = 1000;
+        navbar.style.boxShadow = '0 2px 2px rgba(0, 0, 0, 0.1)';
+        
+        menu.style.position = 'fixed';
+        menu.style.top = navbar.offsetHeight + 'px';
+        menu.style.width = '100%';
+        menu.style.zIndex = 999;
+
+        // Ajustando a barra branca quando a barra de navegação é fixada
+        whiteBar.style.height = menu.offsetHeight + 'px';
+        whiteBar.style.width = '100%';
+        whiteBar.style.backgroundColor = '#fff';
+        whiteBar.style.position = 'fixed';
+        whiteBar.style.top = navbar.offsetHeight + 'px';
+        whiteBar.style.zIndex = 998; // Um número menor que o zIndex da barra de navegação
+    } else {
+        // Se não, restaura a posição original da navbar
+        navbar.style.position = '';
+        navbar.style.top = '';
+        navbar.style.width = '';
+        navbar.style.zIndex = '';
+        navbar.style.boxShadow = '';
+        
+        menu.style.position = '';
+        menu.style.top = '';
+        menu.style.width = '';
+        menu.style.zIndex = '';
+
+        // Resetando a barra branca quando a barra de navegação não está fixa
+        whiteBar.style.height = '0';
+        whiteBar.style.width = '0';
+        whiteBar.style.backgroundColor = 'transparent';
+        whiteBar.style.position = '';
+        whiteBar.style.top = '';
+        whiteBar.style.zIndex = '';
+    }
+});
+
+
+    </script>
+    
+
+       
+           <div class="navbar" id="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Seu Logo">
+    </div>
+    <div class="search-box">
+        <input type="text" placeholder="Pesquisar">
+        <button type="button">Procurar</button>
+    </div>
+</div>
+<div class="navbar-divider"></div>
+<div id="white-bar"></div>
+<nav>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="SobreNós.html">Sobre Nós</a></li>
+        <li><a href="#" onclick="scrollToFooter()">Onde Estamos</a></li>
+    </ul>
+</nav>
+</nav>
+ <section id="onde-estamos">
+       
+        <!-- Seu conteúdo da seção "Onde Estamos" aqui -->
+    </section>
+
+     </header>
+
+<body>
+
+
+
+
+    <script>
+
+        function scrollToFooter() {
+            var footer = document.getElementById('footer');
+            footer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+
+    </script>
+
+
+    <script>
+   
+    // Função para trocar a imagem e ajustar as dimensões
+    function trocarImagem() {
+        var photoFrame = document.getElementById('photo-frame');
+        var currentImage = photoFrame.getElementsByTagName('img')[0];
+
+        // Obter as dimensões originais da imagem "iris creme.jpg"
+        var larguraOriginal = currentImage.width;
+        var alturaOriginal = currentImage.height;
+
+        // Trocar para a imagem "pipa.jpg"
+        currentImage.src = 'maquilhagem.jpg';
+
+        // Definir as dimensões da imagem "pipa.jpg" para serem iguais à imagem original
+        currentImage.style.width = larguraOriginal + 'px';
+        currentImage.style.height = alturaOriginal + 'px';
+    }
+
+    // Função para restaurar a imagem original
+    function restaurarImagemOriginal() {
+        var photoFrame = document.getElementById('photo-frame');
+        var currentImage = photoFrame.getElementsByTagName('img')[0];
+
+        // Trocar de volta para a imagem original "iris creme.jpg"
+        currentImage.src = 'nana batom.jpg';
+        // Restaurar o tamanho original
+        currentImage.style.width = '';
+        currentImage.style.height = '';
+    }
+    
+
+
+    
+  
+
+         
+</script>
+
+
+
+
+<div class="photo-section">
+    <div class="photo-container">
+        <div class="green-rectangle"></div>
+        <!-- Adicionando ouvintes de evento para mouseover e mouseout -->
+        <div class="photo-frame" id="photo-frame" onmouseover="trocarImagem()" onmouseout="restaurarImagemOriginal()">
+            <img src="nana batom.jpg" alt="Sua Foto" class="photo">
+        </div>
+
+        <div class="subscription-container">
+            <h2>Mariana Roquette</h2>
+            <p> Exploro a magia da maquilhagem para realçar a singularidade de cada pessoa.
+            Com paixão e precisão desvendo a magia da maquilhagem criando histórias visuais que realçam a singularidade de cada pessoa e aumentam a confiança. 
+           
+    </div>
+    </div>
+
+
+<div class="additional-section">
+    <!-- Caixa de texto -->
+    <div class="text-box">
+        <p>
+        
+Na Beauty Essence, explore a beleza consciente da maquilhagem.<br> Os nossos produtos são 100% vegan e livres de testes em animais,<br>  refletindo o nosso compromisso com a sustentabilidade.<br>  Descubra uma nova era de beleza responsável na nossa loja.</p>
+    </div>
+
+    <!-- Linha de divisão -->
+    <hr class="division-line">
+
+    <!-- Título e imagens -->
+    <div class="title-and-images">
+        <h3>Os nossos procedimentos:</h3>
+        <!-- Quatro imagens com frases -->
+        <div class="image-container">
+            <img src="folha.png" alt="Image 1" width="20" height="20">
+            <span>Maquilhagem Social</span>
+        </div>
+        <div class="image-container">
+            <img src="folha.png" alt="Image 2" width="20" height="20">
+            <span>Maquilhagem de Noiva</span>
+        </div>
+        <div class="image-container">
+            <img src="folha.png" alt="Image 3" width="20" height="20">
+            <span>Maquilhagem Artística</span>
+        </div>
+        <div class="image-container">
+            <img src="folha.png" alt="Image 4" width="20" height="20">
+            <span>Maquilhagem para Olhos</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<footer id="footer">
+   <div class="footer">
+        <div class="footer-section">
+            <div class="footer-title">Contactos:</div>
+            <a href="#" class="footer-button">Número de telefone:</a>
+            <p>214 186 378 </p>
+            <a href="https://accounts.google.com/v3/signin/identifier?elo=1&ifkv=ATuJsjx0IKwMD0ncuCPa1gXaQU-jTDbiw2SjidM6qnXx8QH_2mg0--JZkyldQ1QgHnvKux6wnOjLQA&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1" class="footer-button">Email:</a>
+            <p> geral@beautyessence.com </p>
+            <a href="https://www.google.com/maps/place/Centro+C%C3%ADvico+de+Carnaxide/@38.7268189,-9.2470789,17z/data=!4m10!1m2!2m1!1sC.C.,+Carnaxide-+Av.+de+Portugal+2790-061+Carnaxide!3m6!1s0xd1ecc5d8c4e72e7:0x9ea179375e258237!8m2!3d38.7268189!4d-9.2423153!15sCjNDLkMuLCBDYXJuYXhpZGUtIEF2LiBkZSBQb3J0dWdhbCAyNzkwLTA2MSBDYXJuYXhpZGWSARFyZWNyZWF0aW9uX2NlbnRlcuABAA!16s%2Fg%2F11cn2m2n04?entry=ttu" class="footer-button">Morada:</a>
+            <p class="alinhamento-esquerda">C.C., Carnaxide- Av. de Portugal <br>
+            2790-061 Carnaxide</p>
+         </div>
+
+         <div class="footer-section section-2">
+         <div class="footer-section">
+            <div class="footer-title">Procedimentos:</div>
+             <a href="Maquilhagem.html" class="footer-button">Maquilhagem</a>
+             <a href="CuidadosDePele.html" class="footer-button">Cuidados de pele</a>
+             <a href="Unhas.html" class="footer-button">Unhas</a>
+        </div>
+<br>
+<br>
+        <div class="footer-images">
+        <a href="https://www.facebook.com/login/"><img src="icon fb.png" alt="facebook" width="40" height="40"></a>
+        <a href="https://www.instagram.com/"><img src="icon insta.png" alt="Instagram" width="40" height="40"></a>
+        <a href="https://twitter.com/i/flow/login"><img src="icon tt.png" alt="twitter" width="40" height="40"></a>
+        </div>
+</div>
+
+
+</body>
+
+</html> 

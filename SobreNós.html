@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SobreNós.css">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Beauty Essence</title>
+</head>
+
+
+  <style>
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha no canto superior direito */
+    margin-right: 10px; /* Adicione uma margem para ajustar conforme necessário */
+}
+
+.search-box input {
+    padding: 15px;
+    width: 200px; /* Defina a largura desejada */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box button {
+    padding: 15px;
+    background-color: #ffc0cb;
+    color: #888;
+    border: #ffc0cb;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    outline: none;
+}
+
+
+
+/* Adicione esse estilo para alinhar verticalmente o botão com a barra de pesquisa */
+.search-box button {
+    margin-top: 0;
+}
+
+    </style>
+
+<body>
+    
+ <header>
+
+     <script>
+        
+        window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    var menu = document.getElementById('menu');
+    var whiteBar = document.getElementById('white-bar'); // Adicionando referência à barra branca
+    var initialNavbarOffset = navbar.offsetTop;
+
+    if (window.scrollY > initialNavbarOffset) {
+        // Se a posição de rolagem for maior que a posição inicial da navbar, torna a navbar fixa
+        navbar.style.position = 'fixed';
+        navbar.style.top = 0;
+        navbar.style.width = '100%';
+        navbar.style.zIndex = 1000;
+        navbar.style.boxShadow = '0 2px 2px rgba(0, 0, 0, 0.1)';
+        
+        menu.style.position = 'fixed';
+        menu.style.top = navbar.offsetHeight + 'px';
+        menu.style.width = '100%';
+        menu.style.zIndex = 999;
+
+        // Ajustando a barra branca quando a barra de navegação é fixada
+        whiteBar.style.height = menu.offsetHeight + 'px';
+        whiteBar.style.width = '100%';
+        whiteBar.style.backgroundColor = '#fff';
+        whiteBar.style.position = 'fixed';
+        whiteBar.style.top = navbar.offsetHeight + 'px';
+        whiteBar.style.zIndex = 998; // Um número menor que o zIndex da barra de navegação
+    } else {
+        // Se não, restaura a posição original da navbar
+        navbar.style.position = '';
+        navbar.style.top = '';
+        navbar.style.width = '';
+        navbar.style.zIndex = '';
+        navbar.style.boxShadow = '';
+        
+        menu.style.position = '';
+        menu.style.top = '';
+        menu.style.width = '';
+        menu.style.zIndex = '';
+
+        // Resetando a barra branca quando a barra de navegação não está fixa
+        whiteBar.style.height = '0';
+        whiteBar.style.width = '0';
+        whiteBar.style.backgroundColor = 'transparent';
+        whiteBar.style.position = '';
+        whiteBar.style.top = '';
+        whiteBar.style.zIndex = '';
+    }
+});
+
+
+    </script>
+    
+
+       
+           <div class="navbar" id="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Seu Logo" > </a>
+    </div>
+    <div class="search-box">
+        <input type="text" placeholder="Pesquisar">
+        <button type="button">Procurar</button>
+    </div>
+</div>
+<div class="navbar-divider"></div>
+<div id="white-bar"></div>
+<nav>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#" onclick="scrollToFooter()">Onde Estamos</a></li>
+    </ul>
+</nav>
+</nav>
+ <section id="onde-estamos">
+    <script>
+
+        function scrollToFooter() {
+            var footer = document.getElementById('footer');
+            footer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+       
+       
+
+     </header>
+
+
+
+<body>
+
+
+<div class="container">
+    <h1>Os nossos compromissos</h1>
+
+    <div class="ball">
+        <img src="beleza consciente.jpg" alt="Imagem 1">
+        <h4>Beleza Consciente</h4>
+    </div>
+
+    <div class="ball">
+        <img src="produtos naturais.jpg" alt="Imagem 2">
+        <h4>Produtos Éticos e Naturais</h4>
+    </div>
+
+    <div class="ball">
+        <img src="procedimentos naturais.jpg" alt="Imagem 3">
+        <h4>Procedimentos Sustentáveis </h4>
+    </div>
+</div>
+
+
+<div class="titulo-container">
+    <h1> A nossa história </h1>
+  </div>
+
+
+
+
+<div class="minha-secao">
+        <div class="image-container">
+            <img src="sãozinha.jpg" alt="Descrição da Imagem">
+        </div>
+        <div class="text-container">
+            <h2>Como surgiu?</h2>
+            <p>A Beauty Essence surgiu como resultado de uma Prova de Aptidão Profissional (PAP) na Escola Profissional de Comunicação e Imagem (EPCI), tornando-se uma expressão genuína de beleza consciente e sustentável. </p>
+        </div>
+    </div>
+
+
+
+ <div class="minha-secao-inversa">
+        <div class="image-container-inversa">
+            <img src="todos juntos.jpg" alt="Descrição da Outra Imagem">
+        </div>
+        <div class="text-container-inversa">
+            <h2>Conceito da marca</h2>
+            <p>Na Beauty Essence, acreditamos que a verdadeira beleza é uma expressão consciente e sustentável, onde a harmonia com a natureza e o respeito pelos animais se tornam a essência do seu brilho único.</p>
+        </div>
+    </div>
+
+
+<br>
+<br>
+<br>
+   <div class="minha-secao">
+        <div class="image-container">
+            <img src="velaEcreme.jpg" alt="Descrição da Imagem">
+        </div>
+        <div class="text-container">
+            <h2>Porquê Beauty Essence?</h2>
+            <p>Combinamos o melhor dos dois mundos, "beauty" representa a sua loja física, um espaço dedicado a uma variedade de procedimentos de beleza que visam realçar a sua aparência e promover uma sensação de bem-estar. "Essence” é a alma da sua marca, enraizada na filosofia de produtos éticos e responsáveis tanto com os animais como com o planeta. </p>
+        </div>
+    </div>
+
+
+
+ <div class="minha-secao-inversa">
+        <div class="image-container-inversa">
+            <img src="logo beauty.jpg" alt="Descrição da Outra Imagem">
+        </div>
+        <div class="text-container-inversa">
+            <h2>Porquê este logotipo?</h2>
+            <p> O logotipo da Beauty Essence destaca uma flor, simbolizando elegância e nossa ligação com a natureza, refletindo a beleza natural dos nossos produtos. 
+           <br> A silhueta da mulher representa a essência da beleza natural, simplicidade e autenticidade.</p>
+        </div>
+    </div>
+
+   
+
+
+
+<footer id="footer">
+   <div class="footer">
+        <div class="footer-section">
+            <div class="footer-title">Contactos:</div>
+            <a href="#" class="footer-button">Número de telefone:</a>
+            <p>214 186 378 </p>
+            <a href="https://accounts.google.com/v3/signin/identifier?elo=1&ifkv=ATuJsjx0IKwMD0ncuCPa1gXaQU-jTDbiw2SjidM6qnXx8QH_2mg0--JZkyldQ1QgHnvKux6wnOjLQA&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1" class="footer-button">Email:</a>
+            <p> geral@beautyessence.com </p>
+            <a href="https://www.google.com/maps/place/Centro+C%C3%ADvico+de+Carnaxide/@38.7268189,-9.2470789,17z/data=!4m10!1m2!2m1!1sC.C.,+Carnaxide-+Av.+de+Portugal+2790-061+Carnaxide!3m6!1s0xd1ecc5d8c4e72e7:0x9ea179375e258237!8m2!3d38.7268189!4d-9.2423153!15sCjNDLkMuLCBDYXJuYXhpZGUtIEF2LiBkZSBQb3J0dWdhbCAyNzkwLTA2MSBDYXJuYXhpZGWSARFyZWNyZWF0aW9uX2NlbnRlcuABAA!16s%2Fg%2F11cn2m2n04?entry=ttu" class="footer-button">Morada:</a>
+            <p class="alinhamento-esquerda">C.C., Carnaxide- Av. de Portugal <br>
+            2790-061 Carnaxide</p>
+         </div>
+
+          <div class="footer-section section-2">
+         <div class="footer-section">
+            <div class="footer-title">Procedimentos:</div>
+             <a href="Maquilhagem.html" class="footer-button">Maquilhagem</a>
+             <a href="CuidadosDePele.html" class="footer-button">Cuidados de pele</a>
+             <a href="Unhas.html" class="footer-button">Unhas</a>
+        </div>
+<br>
+<br>
+        <div class="footer-images">
+        <a href="https://www.facebook.com/login/"><img src="icon fb.png" alt="facebook" width="40" height="40"></a>
+        <a href="https://www.instagram.com/"><img src="icon insta.png" alt="Instagram" width="40" height="40"></a>
+        <a href="https://twitter.com/i/flow/login"><img src="icon tt.png" alt="twitter" width="40" height="40"></a>
+        </div>
+</div>
+
+
+</body>
+
+</html> 
